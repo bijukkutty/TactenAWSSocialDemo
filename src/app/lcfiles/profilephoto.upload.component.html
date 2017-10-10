@@ -1,0 +1,99 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="assets/css/croppie.css" />
+<script src="assets/scripts/croppie.js"></script>
+<link rel="stylesheet" href="assets/css/demo.css" />
+
+ <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700' rel='stylesheet' type='text/css'>
+        <link rel="Stylesheet" type="text/css" href="assets/css/prism.css" />
+        <link rel="Stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css" />
+    
+        <link rel="icon" href="//foliotek.github.io/favico-64.png" />
+<script src="assets/scripts/demo.js"></script>
+
+<section class="section no-pad-bot" id="project">
+	
+
+<div class="custom-Modal" id="editProfile">
+	<a class="custom-modal-close"><i class="material-icons">close</i></a>
+	<form  name="Editprofile">
+		<div class="custom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Add Photo and Video</h1>
+					<div class="row">
+						<div class="col s12 l6">
+							<h4>Add Photo</h4>
+							<span>You can upload a JPEG, GIF, or PNG file</span>
+                            <input class="upload" type="file" id="upload" value="Choose a file" accept="image/*" />
+							<!--<a class="upload">Upload Photo</a>-->
+						</div>
+                        <div class="upload-demo-wrap">
+                                <div id="upload-demo"></div>
+                        </div>
+						<div class="col s12 l6">
+							<h4>Add Video</h4>
+							<span>Link any of your online video</span>
+							<div class="input-field">
+								<a class="upload add-link">ADD</a>
+								<input type="text" class="url">
+								<label>URL</label>
+							</div>
+							<div>
+								Or
+							</div>
+							<a class="upload">Upload Video</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+</section>
+
+<!-- Local app main javascript -->
+<script type="text/javascript">
+/*$(document).ready(function(){
+	$('.masonry').masonry({
+		// options
+		itemSelector : '.item'
+	});
+	$('ul.tabs').tabs();
+	$('select').material_select();
+	$('.datepicker').pickadate({
+		selectMonths: true, // Creates a dropdown to control month
+		selectYears: 15 // Creates a dropdown of 15 years to control year
+	});
+	$('.project-open').on('click',function(){
+		$('#CreateProject').addClass('active');
+	});
+	$('.class-open').on('click',function(){
+		$('#CreateClass').addClass('active');
+	});
+	$('.editProfile-open').on('click',function(){
+		$('#editProfile').addClass('active');
+	});
+	$('.custom-modal-close').on('click',function(){
+		$('.custom-Modal').removeClass('active');
+	});
+	setInterval(function(){
+		if($('.custom-Modal').hasClass('active')){
+			$('body').css('overflow','hidden');
+		}
+		else{
+			$('body').css('overflow','');
+		}
+	},10);
+
+});*/
+
+</script>
+
+ <script>
+            //document.getElementById('year').innerHTML = (new Date).getFullYear();
+            Demo.init();
+        </script>

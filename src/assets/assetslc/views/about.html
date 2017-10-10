@@ -1,0 +1,190 @@
+<section class="section no-pad-bot">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m4">
+				<div class="left-col">
+					<div class="profile-img aboutPage">
+						<div class="artistImg"><p>Kalpavruksha, 2016, by Bhaskar Rao</p></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col s12 m8">
+				<div class="right-col">
+					<h1>About</h1>
+					  <p class="first-letter">Creatives, catalysts and patrons fail to connect, learn, co-create, and develop sustainable services and businesses. This is a fragmented and exploited ecosystem. It is failing to bring beauty and goodness to our society that it is capable of. We at ‘Let's create’ believe that this is a problem worth fixing. A networked inter-disciplinary collaboration platform to nurture creativity, transparency, innovation, co-creation & entrepreneurship to serve the common good is a right step to foster a thriving ecosystem.</p>
+					<p>We are a community of creatives, catalysts, patrons and entrepreneurs at the convergence of arts, design, media, science, technology and business to connect, learn, co-create, mentor and bring ideas to life.</p>
+					<div style="">
+						<div class="row">
+							<div class="col s12">
+								<h5 class="text-uppercase subHeading mTop50">Curators &amp; Community Moderators</h5>
+								<div class="masonry community">
+									<div class="col s12 m3 item">
+										<a href="#">
+											<img src="images/meaghan.jpg" />
+											<h4>Meaghan Ritchey</h4>
+											<p>Curator, New York</p>
+										</a>
+									</div>
+								</div>
+						</div>
+					  </div>
+				   </div>
+
+				   <div class="">
+						<div class="row">
+							<div class="col s12">
+								<h5 class="text-uppercase subHeading mTop50">Board</h5>
+								<div class="masonry community">
+									<div class="col s12 m3 item">
+										<a href="#">
+											<img src="images/mark.jpg" />
+											<h4>Mark Raja</h4>
+											<p>Designer, Bangalore</p>
+										</a>
+									</div>
+									<div class="col s12 m3 item">
+										<a href="#">
+											<img src="images/naveen.jpg" />
+											<h4>Naveen Kumar</h4>
+											<p>Flutist, Mumbai</p>
+										</a>
+									</div>
+									<div class="col s12 m3 item">
+										<a href="#">
+											<img src="images/berenice.jpg" />
+											<h4>Berenice Rarig</h4>
+											<p>Installation Artist, Perth</p>
+										</a>
+									</div>
+									<div class="col s12 m3 item">
+										<a href="#">
+											<img src="images/dev.jpg" />
+											<h4>Devendra Chowdary</h4>
+											<p>Business Coach, Bangalore</p>
+										</a>
+									</div>
+								</div>
+							</div>
+					  </div>
+					</div>
+
+
+
+			</div>
+		</div>
+		</div>
+	</div>
+</section>
+
+<div id="slide-out" class="side-nav">
+	<ul>
+		<li>
+			<div class="userView">
+
+				  <div class="row">
+					<!--div class="col s4">
+					  <img class="circle" src="images/yuna.jpg">
+					 </div>
+					 <div class="col s8">
+					  <span class="name">Meaghan R</span>
+					  <span class="email">CURATOR</span>
+					  <a href="#" style="line-height:1;">Logout</a>
+					 </div -->
+					 <div class="col s12">
+						<a href="#requestInvite" class="btn waves-effect white open-modal">Request for Invite</a>
+						Already a member? <a href="#login" class="text-uppercase dInlineBlock open-modal">Login</a> here
+					 </div>
+				  </div>
+
+			</div>
+			<!--div class="row">
+				<div class="right">
+					<i class="material-icons waves-effect">notifications</i>
+					<i class="material-icons waves-effect">email</i>
+				</div>
+			</div-->
+		</li>
+	<li><div class="divider"></div></li>
+	</ul>
+
+	<ul ng-init="commonlinks=[{name:'Ways to participate?',link:'wayto.html'},{name:'About Common good',link:'commongood.html'},{name:'About us',link:'aboutus.html'}]">
+		<li ng-repeat="x in commonlinks">
+		  <a href="{{x.link}}">{{ x.name }}</a>
+		</li>
+	</ul>
+</div>
+
+<!-- Invite Modal -->
+
+<div class="custom-Modal" id="requestInvite" ng-controller="inviteController">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm" ng-submit="submitForm()">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field">
+							<input type="email" name="email" class="validate"  ng-model="user.email" />
+							<label  data-error="Please enter email id">Email</label>
+							<span ng-show="errorEmail">{{errorEmail}}</span>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Request for Invite" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<div class="custom-Modal" id="login">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field s12 m6">
+							<input type="email" name="email" class="validate" />
+							<label data-error="Please enter email id">Email</label>
+						</div>
+						<div class="input-field s12 m6">
+							<input type="password" name="email" />
+							<label>Password</label>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Login" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script src="js/masonry.pkgd.min.js"></script>

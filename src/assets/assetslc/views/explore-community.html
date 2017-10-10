@@ -1,0 +1,203 @@
+<section class="section no-pad-bot">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 ">
+				<h1 >Explore Community</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<form>
+					<div class="input-field col s12">
+					  <i class="material-icons prefix">search</i>
+					  <input id="first_name" type="text" class="validate">
+					  <label for="first_name">Search</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="masonry">
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-1.png" />
+							<h4>Peter Evanss</h4>
+							<p>Photographer</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-2.png" />
+							<h4>Peter Evanss</h4>
+							<p>Product Designer</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-3.png" />
+							<h4>Peter Evanss</h4>
+							<p>Writer</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-4.png" />
+							<h4>anybarra83</h4>
+							<p>Painter</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-5.png" />
+							<h4>bellaarts</h4>
+							<p>Musician</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-6.png" />
+							<h4>KaliBali</h4>
+							<p>Dancer</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-7.png" />
+							<h4>bellaarts</h4>
+							<p>MUSICIAN</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-8.png" />
+							<h4>Peter Evans</h4>
+							<p>MUSICIAN</p>
+						</a>
+					</div>
+					<div class="col s12 m3 item">
+						<a href="#">
+							<img src="images/community/community-9.png" />
+							<h4>anybarra83</h4>
+							<p>MUSICIAN</p>
+						</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<div id="slide-out" class="side-nav">
+	<ul>
+		<li>
+			<div class="userView">
+
+				  <div class="row">
+					<!--div class="col s4">
+					  <img class="circle" src="images/yuna.jpg">
+					 </div>
+					 <div class="col s8">
+					  <span class="name">Meaghan R</span>
+					  <span class="email">CURATOR</span>
+					  <a href="#" style="line-height:1;">Logout</a>
+					 </div -->
+					 <div class="col s12">
+						<a href="#requestInvite" class="btn waves-effect white open-modal">Request for Invite</a>
+						Already a member? <a href="#login" class="text-uppercase dInlineBlock open-modal">Login</a> here
+					 </div>
+				  </div>
+
+			</div>
+			<!--div class="row">
+				<div class="right">
+					<i class="material-icons waves-effect">notifications</i>
+					<i class="material-icons waves-effect">email</i>
+				</div>
+			</div-->
+		</li>
+	<li><div class="divider"></div></li>
+	</ul>
+
+	<ul ng-init="commonlinks=[{name:'Ways to participate?',link:'wayto.html'},{name:'About Common good',link:'commongood.html'},{name:'About us',link:'aboutus.html'}]">
+		<li ng-repeat="x in commonlinks">
+		  <a href="{{x.link}}">{{ x.name }}</a>
+		</li>
+	</ul>
+</div>
+
+<!-- Invite Modal -->
+
+<div class="custom-Modal" id="requestInvite" ng-controller="inviteController">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm" ng-submit="submitForm()">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field">
+							<input type="email" name="email" class="validate"  ng-model="user.email" />
+							<label  data-error="Please enter email id">Email</label>
+							<span ng-show="errorEmail">{{errorEmail}}</span>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Request for Invite" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<div class="custom-Modal" id="login">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field s12 m6">
+							<input type="email" name="email" class="validate" />
+							<label data-error="Please enter email id">Email</label>
+						</div>
+						<div class="input-field s12 m6">
+							<input type="password" name="email" />
+							<label>Password</label>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Login" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script src="js/masonry.pkgd.min.js"></script>

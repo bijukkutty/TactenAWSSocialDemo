@@ -1,0 +1,41 @@
+.mTop50 {
+	margin-top: 50px;
+}
+.mTop30 {
+	margin-top: 30px;
+}
+.mTop10 {
+	margin-top: 10px;
+}
+.mTop20 {
+	margin-top: 20px;
+}
+.mTop15 {
+	margin-top: 15px;
+}
+.mTop60vh {
+	margin-top: 60vh;
+}
+.mBot10 {
+	margin-bottom: 10px;
+}
+.subHeading {
+	margin-bottom: 20px;
+}
+.dInlineBlock {
+	display: inline-block !important;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+p.first-letter::first-letter{
+	float: left;  font-size: 350%; line-height: 3rem; padding-top: 14px; padding-right: 8px;
+}
+
+.bullet-list{
+	li{
+		list-style: circle !important;
+		margin-left: 20px;
+	}
+}

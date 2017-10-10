@@ -1,0 +1,73 @@
+
+<!-- Invite Modal -->
+
+<div class="custom-Modal" id="requestInvite">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm" ng-submit="submitForm()">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field">
+							<!--<input type="email" name="email" class="validate"  ng-model="user.email" />
+							<label  data-error="Please enter email id">Email</label>
+							<span ng-show="errorEmail">{{errorEmail}}</span> -->
+							<input type="email" name="email" class="validate"  ng-model="user.email" required />
+							<label  data-error="Please enter email id">Email</label>
+							<span ng-show="errorEmail">{{errorEmail}}</span>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Request for Invite" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!-- forgotPassword -->
+
+
+<div class="custom-Modal" id="forgotPassword">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="myForm" ng-submit="submitMyForm()">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field">
+							<input type="email" name="email" class="validate" />
+							<label  data-error="Please enter email id">Email</label>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Reset Password" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>

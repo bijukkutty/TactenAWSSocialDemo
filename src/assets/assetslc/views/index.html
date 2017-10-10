@@ -1,0 +1,93 @@
+<section class="section no-pad-bot " id="hero-banner">
+	<div class="container" id="hero-text-container">
+		<div class="row">
+			<div class="center-align heading">
+				<div class="col l1 hide-on-med-and-down"></div>
+				<div class="col s12 l10">
+					<h1 class="active">A community of creatives and catalysts who co-create for the Common good!</h1>
+					<h1>An interdisciplinary networked platform that gathers creatives, curators, mentors, patrons and entrepreneurs.</span></h1>
+					<h1>... at the convergence of arts, design, science, Technology and Business.</h1>
+					<h1>... to foster creativity, co-creation, community, discourse and entrepreneurship.</h1>
+					<h1>... for economic, cultural, environmental and individual flourishing.</h1>
+				</div>
+				<div class="col l1 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 mTop50">
+				<div class="center-align ">
+					<a href="#/register" class="btn btn-primary waves-effect">Explore</a>
+					<a class="btn btn-login waves-effect white-text login-open">login</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section " ng-controller="communityCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 center-align masonry">
+				<h1>Popular Projects</h1>
+				<ul ng-repeat="x in upcomingEventsData">
+					<li class="col s12 m3 item">
+						<a href="#" id="{{x.id}}">
+							<img src="{{x.img}}" />
+							<span>{{x.date}}</span>
+							<h4>{{x.title}}</h4>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="community" class="">
+	<div class="container" id="eco-text-container" ng-controller="communityCtrl">
+		<div class="row">
+			<div class="col s12 masonry community">
+				<h1 class="center-align ">Community</h1>
+				<ul ng-repeat="x in communityData">
+					<li class="col s12 m2 item">
+						<a href="#" id="{{x.id}}">
+							<img src="{{x.img}}" />
+							<h4>{{x.title}}</h4>
+							<p>{{x.role}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section carousel_section">
+	<div class="carousel carousel-slider center" data-indicators="true">
+		<div class="carousel-item carousel_one" href="#one!">
+			<div class="center carousel_text">
+				<h2>let's create opens up a world of opportunity</h2>
+				<p>Daniel Craig</p>
+			</div>
+		</div>
+		<div class="carousel-item  carousel_two" href="#two!">
+		</div>
+		<div class="carousel-item  carousel_three" href="#three!">
+		</div>
+		<div class="carousel-item  carousel_four" href="#four!">
+		</div>
+	</div>
+</section>
+
+<script>
+	$(document).ready(function(){
+		$('.carousel.carousel-slider').carousel({fullWidth: true});
+		setInterval(function(){
+			$('.login-open').on('click',function(){
+				$('#LoginModal').addClass('active');
+				$('#SignupModal').removeClass('active');
+			});
+		},10);
+	});
+</script>

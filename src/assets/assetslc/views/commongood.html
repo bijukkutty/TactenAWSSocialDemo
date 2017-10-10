@@ -1,0 +1,126 @@
+<section class="section no-pad-bot" id="common-good">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m4">
+				<div class="left-col">
+					<div class="profile-img commonPage">
+						<div class="artistImg"><p>Suspended in Ice (2016) by Peter Bakelaar</p></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col s12 m8">
+				<div class="right-col">
+					<h1>Common Good</h1>
+					  <p class="first-letter">
+					  We live in a world that sees nature and culture as resources there for us to exploit. We pollute our land, rivers, lakes, air and even our food, dominated by commercial interests, careless of toxic byproducts in the name of development and progress. In the same way we are polluting our cultural landscape. The industrialist mentality that is prevalent today has reduced people to "workers" or "human resources", seen as interchangeable cogs, often treated as machines and now often replaced by machines. Everything and everyone is reduced to commodity and all human worth is measured by productivity, gain and control. Dignity and values are stripped from humanity. We have lost the idea of common good in our lives and the necessity of it for both individual and social flourishing. Culture of anxiety, over commoditization and fear of scarcity that we created has failed us all.
+					  </p>
+					  <p>
+					  This ancient idea of Common good has been lost, but can and should be sought again. The need for a new dialogue about what it means and what its practice would require of us has never seemed more critical. This idea has origins in the beginning of Biblical narrative. It hinges in the greatest commandment Jesus gave about loving our neighbour as ourselves and even loving our enemies.
+					  </p>
+					  <p>
+					  A commitment to the common good could bring us together and solve the deepest problems our neighbourhoods and the world now face: How do we work together? How do we treat each other, especially the poorest and most vulnerable? How do we take care of not just ourselves but also one another?
+						<h1>
+							What if we see creativity as a gift for economic, cultural, environmental and individual flourishing and not as commodity?
+						</h1>
+					  </p>
+					  <p>What if we see creativity as a gift for economic, cultural, environmental and individual flourishing and not as commodity? What if we commit to foster fresh imagination and meaning into culture where creativity, innovation and entrepreneurship can serve the common good?</p>
+					  <p>We believe that arts and technology can play a significant role in shaping our Common life by modelling and exhibiting rehumanizing values. Let’s Create has a dream to become an ecosystem to foster artists, designers, writers, technologists, scientists, businessmen, philosophers, etc., to cultivate Common good in our neighbourhoods, cities, nations and the world.</p>
+					  <hr>
+					  <div class="row">
+							<div class="col s12"><p>At ‘Let’s Create’ practicing Common good mean all the projects, programs and exhibits done through the platform upholds the following truths:</p></div>
+						</div>
+					  <div class="common-quotes">
+
+						  <div class="row">
+							<div class="col s12">
+								<h2>Seek Justice</h2>
+								<p>Thomas Aquinas puts Justice as one of the four cardinal virtues besides Prudence, Fortitude and Temperance. This is a fundamental virtue for any society. It is a determination to give everyone her or his rightful due. Seeking justice in these areas in our daily life establishes Common good.</p>
+							</div>
+							<div class="col s12">
+								<p><b>Equality: </b>All people are equal, respected and given equal opportunity irrespective of gender, race, caste, creed, religion, nationality, age, income etc.</p>
+							</div>
+							<div class="col s12">
+								<p><b>Human dignity: </b>Every individual have an inherent and immeasurable worth and dignity; each human life is sacred. Honor and respect to every individual is another foundational value.</p>
+							</div>
+							<div class="col s12">
+								<p><b>Liberty: </b>Liberty with virtue</p>
+							</div>
+							<div class="col s12">
+								<p><b>Right to property</b>Respecting everyone’s right to property and fighting against exploitation of the same.</p>
+							</div>
+						   </div>
+
+						  <div class="row">
+							<div class="col s12">
+								<h2>Love Mercy</h2>
+								<p>To empatize and actively strives to avert the misery of others that touches her/his heart often in ethically neutral circumstances. According to St. Augustine “Mercy is the compassion of our heart when considering the misery of another person”.</p>
+							</div>
+							<div class="col s12">
+								<p><b>Welfare: </b>Well being of every individual, especially the poor and the less privileged, clean environment, fair trade, access to education and health care are essential for a thriving society.<br>
+Efforts to build this serves the common good</p>
+							</div>
+							<div class="col s12">
+								<p><b>Civility: </b>The act of showing regard for others in spite of the differences protects the Common good.</p>
+							</div>
+						  </div>
+
+						  <div class="row">
+							<div class="col s12">
+								<h2>Honor Marriage</h2>
+								<p>Love, Marriage, family and fidelity is the foundation of any healthy society. Honoring marriage is honoring Common good.</p>
+							</div>
+						  </div>
+						  <!--div class="row">
+							<div class="col s12">
+								<h2>Non religious</h2>
+								<p>Anything that serves only a particular religious group or enforces any religious views on others may not serve the Common good.</p>
+							</div>
+						  </div-->
+
+					  </div>
+
+
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+<!-- Invite Modal -->
+
+<div class="custom-Modal hide" id="requestInvite" ng-controller="inviteController">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm" ng-submit="submitForm()">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field">
+							<input type="email" name="email" class="validate"  ng-model="user.email" />
+							<label  data-error="Please enter email id">Email</label>
+							<span ng-show="errorEmail">{{errorEmail}}</span>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Request for Invite" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<script src="/scripts/masonry.pkgd.min.js"></script>

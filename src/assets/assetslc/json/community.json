@@ -1,0 +1,40 @@
+{  
+   "data":[  
+      {  
+         "img":"/images/community/community-1.png",
+         "id":"community-1",
+         "title":"Peter Evans",
+         "role":"Photographer"
+      },
+      {  
+         "img":"/images/community/community-2.png",
+         "id":"community-2",
+         "title":"Peter",
+         "role":"Product Designer"
+      },
+      {  
+         "img":"/images/community/community-3.png",
+         "id":"community-3",
+         "title":"Peter",
+         "role":"Product Designer"
+      },
+      {  
+         "img":"/images/community/community-4.png",
+         "id":"community-4",
+         "title":"anybarra83",
+         "role":"Painter"
+      },
+      {  
+         "img":"/images/community/community-5.png",
+         "id":"community-5",
+         "title":"bBllaarts",
+         "role":"Musician"
+      },
+      {  
+         "img":"/images/community/community-6.png",
+         "id":"community-6",
+         "title":"KaliBali",
+         "role":"Dancer"
+      }
+   ]
+}

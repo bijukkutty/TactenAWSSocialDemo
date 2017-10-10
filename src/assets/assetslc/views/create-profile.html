@@ -1,0 +1,209 @@
+<section class="section no-pad-bot" id="profile" ng-controller="profileController">
+<div class="container">
+	<div class="row mBottom0">
+		<div class="col s12 m4">
+			<div class="left-col profile">
+				<div class="profile-img">
+					<img src="/images/naveen.jpg"/>
+					<span>Add your profile pictures or videos</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="col s12 m8">
+			<div class="right-col profile">
+				<p class="welcome">Welcome</p>
+				<h2>Naveen</h2>
+				<p>It's so good to have you hear.<br>
+				Let's build your best profile page.</p>
+				<a class="btn btn-primary profileCreation">Create Profile</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- create Profile -->
+<div class="custom-Modal" id="ProfileCreation">
+	<a class="custom-modal-close"><i class="material-icons">close</i></a>
+	<form  name="userDetails">
+		<div class="custom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>My Profile</h1>
+					<p>Personal</p>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="title" class="validate" />
+							<label>Professional Title</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="statement" class="validate" />
+							<label>Your Statement</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea class="materialize-textarea"></textarea>
+							<label>Tell us about yourself</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<select>
+								<option value="" disabled selected>Country</option>
+								<option value="1">India</option>
+								<option value="2">USA</option>
+								<option value="3">UAE</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<select>
+								<option value="" disabled selected>City</option>
+								<option value="1">Bangalore</option>
+								<option value="2">New York</option>
+								<option value="3">Dubai</option>
+							</select>
+						</div>
+					</div>
+					<p>Interests</p>
+					<a class="btn-flat">Clear All</a><a class="btn-flat">Save</a>
+					<div class="row">
+						<div class="col s12 m3">
+							<p>Visual Arts</p>
+							<p>
+								<input type="checkbox" id="painting" />
+								<label for="painting">Painting</label>
+							</p>
+							<p>
+								<input type="checkbox" id="illus" />
+								<label for="illus">Illustration</label>
+							</p>
+							<p>
+								<input type="checkbox" id="install" />
+								<label for="install">Installation</label>
+							</p>
+						</div>
+						<div class="col s12 m3">
+							<p>Design</p>
+							<p>
+								<input type="checkbox" id="graphic" />
+								<label for="graphic">Graphic</label>
+							</p>
+							<p>
+								<input type="checkbox" id="fashion" />
+								<label for="fashion">Fashion</label>
+							</p>
+							<p>
+								<input type="checkbox" id="textile" />
+								<label for="textile">Textile</label>
+							</p>
+						</div>
+						<div class="col s12 m3">
+							<p>Literary Arts</p>
+							<p>
+								<input type="checkbox" id="writing" />
+								<label for="writing">Writing</label>
+							</p>
+							<p>
+								<input type="checkbox" id="cwriting" />
+								<label for="cwriting">Copy Writing</label>
+							</p>
+							<p>
+								<input type="checkbox" id="poetry" />
+								<label for="poetry">Poetry</label>
+							</p>
+						</div>
+						<div class="col s12 m3">
+							<p>Performing Arts</p>
+							<p>
+								<input type="checkbox" id="music" />
+								<label for="music">Music</label>
+							</p>
+							<p>
+								<input type="checkbox" id="dance" />
+								<label for="dance">Dance</label>
+							</p>
+							<p>
+								<input type="checkbox" id="vocals" />
+								<label for="vocals">Vocals</label>
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<input type="checkbox" id="acceptExp"/>
+							<label for="acceptExp">Yes I would like to contribute my skills for any project?</label>
+						</div>
+					</div>
+					<p>Portfolio</p>
+					<div class="row">
+						<div class="input-field col s12 m6">
+							<input type="text" id="portfolioYoutube" />
+							<label for="portfolioYoutube">Youtube</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="portfolioBehance" />
+							<label for="portfolioBehance">Behance</label>
+						</div>
+						<a class="btn-flat">Add More</a>
+					</div>
+					<p>Social</p>
+					<div class="row">
+						<div class="input-field col s12 m6">
+							<input type="text" id="socialFb" />
+							<label for="socialFb">Facebook</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="socialLinkedIn" />
+							<label for="socialLinkedIn">LinkedIn</label>
+						</div>
+						<a class="btn-flat">Add More</a>
+					</div>
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<a href="#/profileDetails" class="btn btn-primary waves-effect">Create</a>
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+</section>
+
+<script src="scripts/masonry.pkgd.min.js"></script>
+<!-- Local app main javascript -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.masonry').masonry({
+		// options
+		itemSelector : '.item'
+	});
+	$('select').material_select();
+	$('.profileCreation').on('click',function(){
+		$('#ProfileCreation').addClass('active');
+	});
+	$('.custom-modal-close').on('click',function(){
+		$('.custom-Modal').removeClass('active');
+	});
+	setInterval(function(){
+		if($('.custom-Modal').hasClass('active')){
+			$('body').css('overflow','hidden');
+		}
+		else{
+			$('body').css('overflow','');
+		}
+	},10);
+});
+</script>

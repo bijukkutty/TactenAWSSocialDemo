@@ -1,0 +1,188 @@
+@media only screen and(min-width: 992px) {
+	.row{
+		margin-left: -.75rem;
+	  margin-right: -.75rem;
+	}
+}
+
+@media only screen and(max-width: 992px) {
+	#eco-system {
+		.mTop60vh{
+			margin-top: 23vh;
+		}
+	}
+	#event-video {
+		#event-text-container{
+			padding-top: 23vh;
+		}
+	}
+	#event-text-container {
+		padding-top: 48vh;
+	}
+	#hero-text-container h1{
+		font-size: 3rem;
+	}
+	.sectionArea > section.section {
+		height: 55vh;
+	}
+	.masonry{
+		li{
+			margin-bottom: 20px;
+		}
+	}
+
+	.left-col{
+		.profile-img{
+			&.aboutPage{
+				background-size: 180%;
+			}
+			&.waytoPage {
+				background-size: 150%;
+			}
+		}
+	}
+	.padding-mobile{
+		padding: 0 1rem;
+	}
+
+	header{
+		
+		.container{
+			width: 100%;
+		}
+	}
+
+}
+
+@media only screen and(max-width: 767px) {
+	header{
+		nav{
+			height: 55px;
+		}
+	}
+	
+	.container{
+		//width: 90%;
+	}
+
+	.prallaxNav{
+		display: none;
+	}
+	.btn{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	form{
+		.row{
+			margin-bottom: 0;
+		}
+	}
+
+	body>section h1{
+		    margin: 90px 0 20px 10px;
+	}
+
+
+	.right-col {
+		padding: 2rem 1rem 0;
+		margin: 0 !important;
+		h1:first-child{
+			font-size: 2rem;
+		}
+		.mTop50{
+			margin-top: 20px;
+		}
+
+	}
+
+	body.nav-expanded .left-col{
+		left: 0 !important;
+	}
+
+	.left-col{
+		position: relative;
+		border: none;
+		.profile-img{
+			height: 75vh;
+			&.waytoPage{
+				background-position: center bottom;
+				}
+		}
+	}
+
+	.sectionArea > section {
+		&.section{
+			height: 100vh;
+		}
+		h1{
+			font-size: 2rem;
+			margin: 20px 0;
+		}
+	}
+
+	header nav .brand-logo{
+		width: 50px;
+		height: 50px;
+		padding-top: 5px;
+		display: none;
+		&.mobile{
+			display: block;
+		}
+	}
+
+	#upcoming-events{
+		height: auto;
+		padding-bottom: 30px;
+	}
+
+	#eco-system {
+		height: 55vh;
+	}
+
+	#hero-banner{
+		#hero-text-container{
+			padding-top: 150px;
+			.btn{
+				width: 90%;
+			}
+			.mTop50{
+				margin-top: 0;
+			}
+			.btn-primary{
+				margin-bottom: 10px;
+			}
+			.heading{
+				height: 200px;
+				h1{
+					font-size: 2rem;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+
+
+	#profile .profile-col {
+		margin-left: auto;
+		border: none;
+		padding: inherit;
+		> * {
+			padding: 0 0.75rem;
+		}
+	}
+}
+
+
+
+@media only screen and(min-width: 767px) {
+	#hero-text-container h3 {
+		font-size: 2rem;
+		padding: 20px 195px;
+		padding: 0 195px;
+	}
+	#eco-system h3 {
+		padding: 0 195px;
+	}
+}

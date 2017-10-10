@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lets Create - My Profile</title>
+    <!-- Compiled local - use /sass/styles.scss -->
+    <!-- Compiled and minified CSS -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/materialize.min.css">
+	<link href="css/material-icons.css" media="screen" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Sans" />
+	<link href="css/styles.min.css" media="screen" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <link href="css/ie8.css" type="text/css" rel="stylesheet"></link>
+    <![endif]-->
+	<script src="js/angular.min.js"></script>
+</head>
+<body ng-app="">
+<header>
+	<nav role="navigation">
+		<div class="nav-wrapper container">
+		<a id="logo-container" href="index.html" class="brand-logo circle"><img src="images/logo.png"/></a>
+		<a id="logo-container" href="#!" class="brand-logo circle mobile"><img src="images/logo-tree-01.png"/></a>
+			<ul class="right">
+				<!--li><a href="#"><i class="material-icons">search</i></a></li-->
+				<li><a href="#"  class="menu"><span></span><span></span><span></span><span></span></a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<section class="section no-pad-bot" id="profile">
+	
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m4">
+				<div class="left-col profile">
+				<div class="profile-img"><img src="images/profiles/portfolios/makota-fujimura/mukoto-fujimura.png" /></div>
+				</div>
+			</div>
+			<div class="col s12 m8">
+				<div class="right-col profile">
+				<h1>Makoto Fujimura</h1>
+				<p>It's so good to have you hear.<br>
+				Let's build your best profile page.</p>
+				<div class=""><a href="#createProfile" class="btn btn-primary open-modal">Create Profile</a></div>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+	
+	
+	
+<!-- create Profile -->
+<div class="custom-Modal" id="createProfile">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm" ng-submit="submitLoginForm()">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>My Profile</h1>
+					<p>Personal</p>
+					<div class="row">
+						<div class="input-field col s12 m6">
+							<input type="text" name="email" class="validate"  ng-model="user.title" required />
+							<label  data-error="Please enter professional title">Professional Title</label>
+							<span ng-show="errorTitle">{{errorTitle}}</span>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" name="location" class="validate"  ng-model="user.location" required />
+							<label  data-error="Please enter valid Location">Location</label>
+							<span ng-show="errorLcoation">{{errorLocation}}</span>
+						</div>
+						<div class="input-field col s12">
+							<input type="text" name="aboutme" class="validate"  ng-model="user.aboutme" required />
+							<label  data-error="Please enter about yourself">Location</label>
+							<span ng-show="errorAboutme">{{errorAboutme}}</span>
+						</div>
+					</div>
+					<p>Expertise</p>
+					<div class="row" ng-init="expertise=[{name:'Music',id:'expMusic', checked: 'checked'},{name:'Dance',id:'expDance'},{name:'Painting',id:'expPanting'},{name:'Singing',id:'expSinging'},{name:'Writing',id:'expWriting', checked: 'checked'},{name:'Poetry',id:'expPoetry'},{name:'Design',id:'expDesign'},{name:'Photography',id:'expPhotography'}]">
+						<div class="input-field col s12 m3 {{x.checked}}" ng-repeat="x in expertise">
+							<input type="checkbox" id="{{x.id}}"  class="filled-in" />
+							<label for="{{x.id}}">{{x.name}}</label>
+						</div>	
+						<div class="col s12">
+							<input type="text" id="addNewExp" />
+							<label for="addNewExp">Add new expertise</label>
+						</div>
+						<div class="col s12">
+							<input type="checkbox" id="acceptExp" class="filled-in" />
+							<label for="acceptExp">Yes I would like to contribute my skills for any project?</label>
+						</div>
+					</div>
+					<p>Portfolio</p>
+					<div class="row">
+						<div class="input-field col s12 m6">
+							<input type="text" id="portfolioYoutube" />
+							<label for="portfolioYoutube">Youtube</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="portfolioBehance" />
+							<label for="portfolioBehance">Behance</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="portfolioInstagram" />
+							<label for="portfolioInstagram">Instagram</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="portfolioVimeo" />
+							<label for="portfolioVimeo">Vimeo</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="portfolioWebsite" />
+							<label for="portfolioWebsite">Personal Website</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<a href="#" class="btn btn-flat waves-effect">Add More</a>
+						</div>
+						
+					</div>
+					<p>Portfolio</p>
+					<div class="row">
+						<div class="input-field col s12 m6">
+							<input type="text" id="socialFb" />
+							<label for="socialFb">Facebook</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="socialLinkedIn" />
+							<label for="socialLinkedIn">LinkedIn</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<input type="text" id="socialTwitter" />
+							<label for="socialTwitter">Twitter</label>
+						</div>
+						<div class="input-field col s12 m6">
+							<a href="#" class="btn btn-flat waves-effect">Add More</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>	
+			
+			
+			
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<a href="#" class="btn btn-tertiary waves-effect close-modal">Cancel</a>
+					<input type="submit" class="btn btn-primary waves-effect" value="Create" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<div id="slide-out" class="side-nav">
+	<ul>
+		<li>
+			<div class="userView">
+			  
+				  <div class="row">
+					<div class="col s4">
+					  <img class="circle" src="images/profiles/portfolios/makota-fujimura/mukoto-fujimura.png">
+					 </div>
+					 <div class="col s8">
+					  <span class="name">Meaghan R</span>
+					  <span class="email">CURATOR</span>
+					  <a href="#" style="line-height:1;">Logout</a>
+					 </div>
+					 <!--div class="col s12">
+						<a href="#requestInvite" class="btn waves-effect white open-modal">Request for Invite</a>
+						Already a member? <a href="#login" class="text-uppercase dInlineBlock open-modal">Login</a> here
+					 </div-->
+				  </div>
+			  
+			</div>
+			<!--div class="row">
+				<div class="right">
+					<i class="material-icons waves-effect">notifications</i>
+					<i class="material-icons waves-effect">email</i>
+				</div>
+			</div-->
+		</li>
+	<li><div class="divider"></div></li>	
+	</ul>
+		
+	<ul ng-init="commonlinks=[{name:'Ways to participate?',link:'wayto.html'},{name:'About Common good',link:'commongood.html'},{name:'About us',link:'aboutus.html'}]">
+		<li ng-repeat="x in commonlinks">
+		  <a href="{{x.link}}">{{ x.name }}</a>
+		</li>		
+	</ul>
+</div>
+
+<!-- Latest jQuery -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="js/materialize.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<!-- Local app main javascript -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.masonry').masonry({
+		// options
+		itemSelector : '.item'
+	});
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<section class="section no-pad-bot" ng-controller="regController">
+	<div class="container padding-mobile">
+			<div class="row">
+				<div class="col l1 hide-on-med-and-down"></div>
+				<div class="col s12 l10">
+						<h1 >Welcome</h1>
+				</div>
+				<div class="col l1 hide-on-med-and-down"></div>
+			</div>
+			<div class="row">
+			<div class="col l1 hide-on-med-and-down"></div>
+			<div class="col s12 l10">
+				<div class="row">
+					<div class="col s12">
+						<a href="#" class="btn btn-facebook waves-effect">Signup with facebook</a>
+						<a href="#" class="btn btn-google waves-effect">Signup with Google</a>
+					</div>
+				</div>
+					<form ng-submit="submitRegForm()">
+						<div class="row">
+							<div class="input-field col s12 m6">
+							  <input id="userName" type="text" class="validate" ng-model="user.name" />
+							  <label for="userName" data-error="Please enter name">Name</label>
+							</div>
+							<div class="input-field col s12 m6">
+							  <input id="userEmail"type="email" class="validate" ng-model="user.email">
+							  <label for="userEmail" data-error="Please enter valid email id">Email</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m6">
+							  <input type="password" class="validate" ng-model="user.password" id="pw1" name="pw1" ng-model="pw1" ng-required="">
+							  <label for="pw1">Password</label>
+							</div>
+							<div class="input-field col s12 m6">
+							  <input type="password" class="validate" id="pw2" name="pw2" ng-model="pw2" ng-required="" pw-check="pw1" />
+							  <label for="pw2">Confirm Password</label>
+							  <div class="msg-block" ng-show="myForm.$error">
+								<span class="msg-error" ng-show="myForm.pw2.$error.pwmatch">Passwords don't match.</span>
+							  </div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12 m6">
+							   <select id="age" ng-model="user.age" ng-init="">
+									<option value="0" selected>Above 18</option>
+									<option value="1">Under 18</option>
+								  </select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12 m6">
+								<input type="checkbox" class="filled-in" id="accept" />
+								<label for="accept">I accept terms and condtions of use.</label>
+							</div>
+							<div class="col s12 m6 right-align">
+								<input type="submit" value="Sign Up" class="btn btn-primary waves-effect" />
+							</div>
+						</div>
+						 <!--pre>user : {{user | json}}</pre-->
+
+					</form>
+
+			</div>
+			<div class="col l1 hide-on-med-and-down"></div>
+		</div>
+	</div>
+</section>
+<!-- Invite Modal -->
+
+<div class="custom-Modal" id="requestInvite" ng-controller="inviteController">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm" ng-submit="submitMyForm()">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field">
+							<input type="email" name="email" class="validate"  ng-model="inviteuser.email" />
+							<label  data-error="Please enter valid email id">Email</label>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Request for Invite" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<div class="custom-Modal" id="login">
+	<div class="costom-modal-header">
+		<a href="#" class="close-modal"><i class="material-icons">close</i></a>
+	</div>
+	<form  name="userForm">
+		<div class="costom-modal-content">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Welcome</h1>
+					<p>To create a free Lets Create account, you will need a valid email address. <br> This address will only be used to send your signup link.</p>
+						<div class="input-field s12 m6">
+							<input type="email" name="email" class="validate" />
+							<label data-error="Please enter email id">Email</label>
+						</div>
+						<div class="input-field s12 m6">
+							<input type="password" name="email" />
+							<label>Password</label>
+						</div>
+
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" value="Login" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>

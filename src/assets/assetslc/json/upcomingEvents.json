@@ -1,0 +1,33 @@
+{  
+   "data":[  
+      {  
+         "img":"images/events/event-1.png",
+         "id":"community-1",
+         "title":"The Eyeslicer Season One",
+         "date":"SEP 19 - OCT 24",
+		 "citem" : [{"collection":"Conversations","badge" : "20"}, {"collection":"Updates","badge" : "15"},{"collection":"File Shares","badge" : ""},
+					{"collection":"Today: Session 5,at 5pm", "badge" : "","icon":"perm_contact_calendar","position":"left"}]
+      },
+      {  
+         "img":"images/events/event-2.png",
+         "id":"community-2",
+         "title":"Peter Evans and Taylor Ho Bynum",
+         "date":"SEP 19 - OCT 24",
+		 "citem" : [{"collection":"Conversations","badge" : "3"}, {"collection":"Updates","badge" : "20"},{"collection":"File Shares","badge" : ""},{"collection":"No events for this week", "badge" : "","icon":"perm_contact_calendar","position":"left"}]
+      },
+      {  
+         "img":"images/events/event-3.png",
+         "id":"community-3",
+         "title":"Second Sundays",
+         "date":"SEP 19 - OCT 24",
+		 "citem" : [{"collection":"Conversations","badge" : "20"}, {"collection":"File Shares","badge" : "3"},{"collection":"Tasks","badge" : "1"},{"collection":"Call at 5pm", "badge" : "","icon":"perm_contact_calendar","position":"left"}]
+      },
+      {  
+         "img":"images/events/event-4.png",
+         "id":"community-4",
+         "title":"Building and Improvising with Analog Circuitry",
+         "date":"SEP 19 - OCT 24",
+		"citem" : [{"collection":"233 Joining","badge" : "20"}]
+      }
+   ]
+}

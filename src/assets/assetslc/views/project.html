@@ -1,0 +1,469 @@
+<section class="section no-pad-bot" id="project" ng-controller="projectController">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m4">
+				<div class="left-col profile">
+					<a class="right grey-text profile_edit btn_modal" ng-click="profileEdit()"><i class="material-icons">edit</i></a>
+					<div class="profile-img">
+						<img src="/images/naveen.jpg"/>
+					</div>
+					<div>
+						<ul class="tabs">
+							<li class="tab col s12"><a class="active"  href="#summary">Summary</a></li>
+							<li class="tab col s12"><a href="#creation">Co Creatons</a></li>
+							<li class="tab col s12"><a href="#connection">Connections</a></li>
+							<li class="tab col s12"><a href="#file">Files</a></li>
+							<li class="tab col s12"><a href="#account">Accont Settings</a></li>
+						</ul>
+						<div class="divider"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m8">
+				<div class="right-col profile">
+					<div id="summary">
+						<div class="row">
+							<div class="col s10">
+								<h1>Class Title</h1>
+							</div>
+							<div class="col s2 right-align">
+								<a href="#!" class="grey-text"><i class="material-icons">edit</i></a>
+								<a href="#!" class="grey-text"><i class="material-icons">share</i></a>
+							</div>
+						</div>
+						<div class="row" ng-show="!anyDirtyAndInvalid(submit_entry_form);">
+								<p>Class Description</p>
+								<div>
+									<button ng-click="toggle()" class="btn btn-primary btn_modal">Enroll</button>
+									<button ng-click="toggleClass()" class="btn btn-primary btn_modal">Publish Class</button>
+								</div>
+						</div>
+						<div>
+							<h5 class="mTop50">HIGHLIHTS</h5>
+							<h5 class="mTop50">ABOUT THE COURSE</h5>
+							<div id="instructor_detail">
+								<h5 class="mTop50">INSTRUCTOR</h5>
+							</div>
+							<h5 class="mTop50">HOW DOES IT SERVES THE COMMON GOOD?</h5>
+						</div>
+					</div>
+					<div id="account">
+						<div class="row">
+							<div class="col s12">
+								<h1>Account Settings</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12 right-align">
+								<a class="btn-flat waves-effect">Upgrade</a>
+								<a class="btn-flat waves-effect">Change Password</a>
+								<a class="btn-flat waves-effect">Deactivate Account</a>
+							</div>
+						</div>
+						<div class="row">
+							<p>General</p>
+							<div class="input-field col s12">
+								<input type="text" id="name">
+								<label for="name">Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="username">
+								<label for="username">Username</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<select>
+									<option selected disabled>Country</option>
+									<option>India</option>
+									<option>USA</option>
+									<option>UAE</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="phone">
+								<label for="phone">Phone</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<select>
+									<option selected disabled>Age</option>
+									<option>18-25</option>
+									<option>25-35</option>
+									<option>35-45</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="currency">
+								<label for="currency">Currency</label>
+							</div>
+						</div>
+						<div class="row">
+							<p>Privacy Settings</p>
+							<div class="input-field col s12">
+								<input type="text" id="cntct">
+								<label for="cntct">Who can contact me?</label>
+							</div>
+						</div>
+						<div class="row">
+							<p>Bank Details</p>
+							<div class="input-field col s12">
+								<input type="text" id="bank_name">
+								<label for="bank_name">Bank Name</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="acc_no">
+								<label for="acc_no">Account No</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="ifsc">
+								<label for="ifsc">IFSC</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<select>
+									<option selected disabled>Country</option>
+									<option>India</option>
+									<option>USA</option>
+									<option>UAE</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div id="creation">
+						<div class="row">
+							<div class="col s8">
+								<h1>Co Creations</h1>
+							</div>
+							<div class="col s4 right-align">
+								<a class="grey-text"><i class="material-icons">menu</i></a>
+								<a class="grey-text"><i class="material-icons">more_vert</i></a>
+							</div>
+						</div>
+					</div>
+					<div id="connection">
+						<div class="row">
+							<div class="col s8">
+								<h1>Connections</h1>
+							</div>
+							<div class="col s4 right-align">
+								<a class="grey-text"><i class="material-icons">filter_list</i></a>
+							</div>
+						</div>
+					</div>
+					<div id="file">
+						<div class="row">
+							<div class="col s8">
+								<h1>Files</h1>
+							</div>
+							<div class="col s4 right-align">
+								<a class="grey-text"><i class="material-icons">menu</i></a>
+								<a class="grey-text"><i class="material-icons">filter_list</i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- create Profile -->
+<div ng-show="createProject" class="custom-Modal">
+	<div class="custom-modal-header">
+		<button ng-click="toggle()" class="close-modal"><i class="material-icons">close</i></button>
+	</div>
+	<form  name="createProject" novalidate ng-submit="createProject()">
+		<div class="costom-modal-content">
+			<!--user: {{user | json}}-->
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Create Project</h1>
+					<div class="row" ng-init="project.type=[{name:'Class',id:'class1'},{name:'Project',id:'class2'}]">
+						<div class="input-field col s12">
+							<select id="type">
+								<option selected ng-repeat="x in project.type">{{x.name}}</option>
+							</select>
+							<label for="type">Project Type</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="classname" class="validate" ng-model="project.classname" />
+							<label>Class Name</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="shortdesc" class="validate" ng-model="project.shortdesc" />
+							<label>Short Description</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6"  ng-init="project.type2=[{name:'Class',id:'class1'},{name:'Project',id:'class2'}]">
+							<select id="type2">
+								<option selected ng-repeat="x in project.type2">{{x.name}}</option>
+							</select>
+							<label for="type2">Type</label>
+						</div>
+						<div class="input-field col s6"  ng-init="project.category=[{name:'Class',id:'class1'},{name:'Project',id:'class2'}]">
+							<select id="category">
+								<option selected ng-repeat="x in project.category">{{x.name}}</option>
+							</select>
+							<label for="category">Category</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<input type="text" name="starttime" class="validate" ng-model="project.starttime" />
+							<label>Start Time</label>
+						</div>
+						<div class="input-field col s6">
+							<input type="text" name="endtime" class="validate" ng-model="project.endtime" />
+							<label>End Time</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<input type="date" name="startdate" class="validate datepicker" ng-model="project.startdate" />
+							<label>Start Date</label>
+						</div>
+						<div class="input-field col s6">
+							<input type="date" name="enddate" class="validate datepicker" ng-model="project.enddate" />
+							<label>End Date</label>
+						</div>
+					</div>
+					<div class="row" ng-init="project.repeat=[{name:'Class',id:'class1'},{name:'Project',id:'class2'}]">
+						<div class="input-field col s12">
+							<select id="type">
+								<option selected ng-repeat="x in project.repeat">{{x.name}}</option>
+							</select>
+							<label for="type">Repeats Weekly, Every Monday</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<input type="text" name="seats" class="validate" ng-model="project.seats" />
+							<label>Seats Available</label>
+						</div>
+						<div class="input-field col s6" ng-init="project.price=[{value:50,id:'val1'},{value:100,id:'val2'}]">
+							<select id="price">
+								<option selected ng-repeat="x in project.price">{{x.value}}</option>
+							</select>
+							<label for="price">Price</label>
+						</div>
+					</div>
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" ng-disabled="createProject.$invalid" value="Create" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<!-- create Class -->
+<div ng-hide="createClass" class="custom-Modal">
+	<div class="custom-modal-header">
+		<button ng-click="toggleClass()" class="close-modal"><i class="material-icons">close</i></button>
+	</div>
+	<form name="createClass" novalidate ng-submit="createClass()">
+		<div class="costom-modal-content">
+			<!--user: {{user | json}}-->
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Class Settings</h1>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="cclassname" class="validate" ng-model="class.classname" />
+							<label>Class Name</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="cshortdesc" class="validate" ng-model="class.shortdesc" />
+							<label>Short Description</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6"  ng-init="project.type2=[{name:'Class',id:'class1'},{name:'Project',id:'class2'}]">
+							<select id="type2">
+								<option selected ng-repeat="x in project.type2">{{x.name}}</option>
+							</select>
+							<label for="type2">Type</label>
+						</div>
+						<div class="input-field col s6"  ng-init="project.category=[{name:'Class',id:'class1'},{name:'Project',id:'class2'}]">
+							<select id="category">
+								<option selected ng-repeat="x in project.category">{{x.name}}</option>
+							</select>
+							<label for="category">Category</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<input type="text" name="starttime" class="validate" ng-model="project.starttime" />
+							<label>Start Time</label>
+						</div>
+						<div class="input-field col s6">
+							<input type="text" name="endtime" class="validate" ng-model="project.endtime" />
+							<label>End Time</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<input type="date" name="startdate" class="validate datepicker" ng-model="project.startdate" />
+							<label>Start Date</label>
+						</div>
+						<div class="input-field col s6">
+							<input type="date" name="enddate" class="validate datepicker" ng-model="project.enddate" />
+							<label>End Date</label>
+						</div>
+					</div>
+					<div class="row" ng-init="project.repeat=[{name:'Class',id:'class1'},{name:'Project',id:'class2'}]">
+						<div class="input-field col s12">
+							<select id="type">
+								<option selected ng-repeat="x in project.repeat">{{x.name}}</option>
+							</select>
+							<label for="type">Repeats Weekly, Every Monday</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s6">
+							<input type="text" name="seats" class="validate" ng-model="project.seats" />
+							<label>Seats Available</label>
+						</div>
+						<div class="input-field col s6" ng-init="project.price=[{value:50,id:'val1'},{value:100,id:'val2'}]">
+							<select id="price">
+								<option selected ng-repeat="x in project.price">{{x.value}}</option>
+							</select>
+							<label for="price">Price</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="instructor" class="validate" ng-model="class.instructor" />
+							<label>Add Instructors</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="tags" class="validate" ng-model="class.tags" />
+							<label>Tags</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="highlights" class="validate" ng-model="class.highliht" />
+							<label>Highlights</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="aboutclass" class="validate" ng-model="class.aboutclass" />
+							<label>About the Class</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" name="good" class="validate" ng-model="class.good" />
+							<label>This serves common good because</label>
+						</div>
+					</div>
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+		<div class="custom-modal-footer">
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l4 left-align">
+					<input type="submit" class="btn-flat waves-effect" value="Repeat Class" />
+					<input type="submit" class="btn-flat waves-effect" value="Delete Class" />
+				</div>
+				<div class="col s12 l4 right-align">
+					<input type="submit" class="btn btn-primary waves-effect" ng-disabled="createClass.$invalid" value="Save" />
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div ng-show="editProfile" class="custom-Modal" id="editProfile">
+	<div class="custom-modal-header">
+		<button ng-click="profileEdit()"  class="close-modal"><i class="material-icons">close</i></button>
+	</div>
+	<form  name="Editprofile" novalidate ng-submit="saveProfile()">
+		<div class="costom-modal-content">
+			<!--user: {{user | json}}-->
+			<div class="row">
+				<div class="col l2 hide-on-med-and-down"></div>
+				<div class="col s12 l8">
+					<h1>Add Photo and Video</h1>
+					<div class="row">
+						<div class="col s12 l6">
+							<h4>Add Photo</h4>
+							<span>You can upload a JPEG, GIF, or PNG file</span>
+							<a class="upload">Upload Photo</a>
+						</div>
+						<div class="col s12 l6">
+							<h4>Add Video</h4>
+							<span>Link any of your online video</span>
+							<div class="input-field">
+								<a class="upload add-link">ADD</a>
+								<input type="text" class="url">
+								<label>URL</label>
+							</div>
+							<div>
+								Or
+							</div>
+							<a class="upload">Upload Video</a>
+						</div>
+					</div>
+				</div>
+				<div class="col l2 hide-on-med-and-down"></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+</section>
+<script src="scripts/masonry.pkgd.min.js"></script>
+<!-- Local app main javascript -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.masonry').masonry({
+		// options
+		itemSelector : '.item'
+	});
+	$('ul.tabs').tabs();
+	$('select').material_select();
+	$('.datepicker').pickadate({
+		selectMonths: true, // Creates a dropdown to control month
+		selectYears: 15 // Creates a dropdown of 15 years to control year
+	});
+
+});
+
+</script>

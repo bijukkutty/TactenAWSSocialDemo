@@ -1,0 +1,16 @@
+{  
+   "data":[  
+      {  
+         "img":"../images/community/community-1.png",
+         "id":1,
+         "title":"Peter Evans",
+         "Role":"Photographer"
+      },
+      {  
+         "img":"../images/community/community-1.png",
+         "id":2,
+         "title":"Peter",
+         "Role":"Product Designer"
+      }
+   ]
+}

@@ -1,0 +1,204 @@
+
+<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form method="post">
+		<h1>My Profile</h1>
+     <div class="form-group ">
+      <label class="control-label " for="name">
+       Professional Title
+      </label>
+      <input class="form-control" id="name" name="name" type="text" [(ngModel)]="profileRootObject.lcProfileTitle" class="validate"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="name1">
+       Your Statement
+      </label>
+      <input class="form-control" id="name1" name="statement" type="text" [(ngModel)]="profileRootObject.lcProfileStatement" class="validate"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="message">
+       Tell us about yourself
+      </label>
+      <textarea class="form-control" cols="40" id="message" name="message" rows="10" [(ngModel)]="profileRootObject.lcProfileTellAbtYrself"></textarea>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="select">
+       Country
+      </label>
+	  
+      <select class="select form-control" id="select"[(ngModel)]="selectedCountryDD"
+							(ngModelChange)="processCountrySelection($event)" name="countryName">
+								<option *ngFor="let country of resultCountries"
+								[ngValue]="country">
+								{{country.lcCountryName}}</option>
+							</select>
+       
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="select1">
+       State
+      </label>
+      <select class="select form-control" id="select1" [(ngModel)]="selectedStateDD"
+							(ngModelChange)="processStateSelection($event)" name="stateName">
+								<option *ngFor="let state of resultStates"
+								[ngValue]="state">{{state.lcStateName}}</option>
+							</select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="select2">
+       City
+      </label>
+      <select class="select form-control" id="select2" [(ngModel)]="selectedCityDD"
+							(ngModelChange)="processCitySelection($event)" name="cityName">
+								<option *ngFor="let city of resultCities"
+								[ngValue]="city">{{city.lcCityName}}</option>
+							</select>
+     </div>
+
+	 	<p>I Can Contribute in</p>
+						<div class="row">
+							<div class="col s12">
+								<a href="#!" class="btn btn-flat">Clear All</a>
+								<a href="#!" class="btn btn-flat">Save</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s3" *ngFor="let category of arrCategoriesResponse">
+								<p>{{category.lcCategoryName}}</p>
+								<div *ngFor="let subcat of category.lcSubCategories">
+									  <input [(ngModel)]="subcat.checked" 
+									type="checkbox" id="{{subcat.lcSubCategoryId}}" />
+									<label for="{{subcat.lcSubCategoryId}}">{{subcat.lcSubCategoryName}}</label>
+								</div>
+							</div>
+						</div>
+					<p>My Interests</p>
+						<div class="row">
+							<div class="col s12">
+								<a href="#!" class="btn btn-flat">Clear All</a>
+								<a href="#!" class="btn btn-flat">Save</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s3" *ngFor="let category1 of arrCategoriesInterestResponse let index=i">
+								<p>{{category1.lcCategoryName}}</p>
+								<div *ngFor="let subcat1 of category1.lcSubCategories">
+									  <input [(ngModel)]="subcat1.checked" 
+									type="checkbox" id="{{subcat1.lcSubCategoryId+9999}}" />
+									<label for="{{subcat1.lcSubCategoryId+9999}}">{{subcat1.lcSubCategoryName}}</label>
+								</div>
+							</div>
+						</div>
+					<p>Portfolio</p>
+					<div class="row">
+						<div class="col s6" *ngFor="let lcportfolio of arrlcportfolio; let i = index">
+							<div class="row">
+								<div class="input-field col s3">
+									<select class="browser-default" 
+										[(ngModel)]="lcportfolio.lcPortfolioKey" name="lcPortfolioKey">
+										<option *ngFor="let portOption of arrPortSocOptions"
+												[ngValue]="portOption">{{portOption}}</option>
+									</select>
+								</div>
+								<div class="input-field col s9">
+									<input type="text" class="portfolio" 
+									 type="text" class="portfolio" 
+										[(ngModel)]="lcportfolio.lcPortfolioValue" name="lcPortfolioValue"/>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-flat" (click) = "addMorePortfolio()">Add More</button>
+					</div>
+					<p>Social</p>
+					<div class="row">
+						<div class="col s6" *ngFor="let lcsocial of arrlcsocial; let i = index">
+							<div class="row">
+								<div class="input-field col s3">
+									<select class="browser-default" 
+										[(ngModel)]="lcsocial.lcSocialKey" name="lcSocialKey">
+										<option *ngFor="let socOption of arrPortSocOptions"
+												[ngValue]="socOption">{{socOption}}</option>
+									</select>
+								</div>
+								<div class="input-field col s9">
+									<input type="text" class="portfolio" 
+									 type="text" class="portfolio" 
+										[(ngModel)]="lcsocial.lcSocialValue" name="lcSocialValue"/>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-flat" (click) = "addMoreSocial()">Add More</button>
+					</div>
+     <div class="form-group ">
+      <label class="control-label ">
+       Check all that apply
+      </label>
+      <div class=" ">
+       <div class="checkbox">
+        <label class="checkbox">
+         <input name="checkbox" type="checkbox" value="First Choice"/>
+         First Choice
+        </label>
+       </div>
+       <div class="checkbox">
+        <label class="checkbox">
+         <input name="checkbox" type="checkbox" value="Second Choice"/>
+         Second Choice
+        </label>
+       </div>
+       <div class="checkbox">
+        <label class="checkbox">
+         <input name="checkbox" type="checkbox" value="Third Choice"/>
+         Third Choice
+        </label>
+       </div>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label ">
+       Check all that apply
+      </label>
+      <div class=" ">
+       <div class="checkbox">
+        <label class="checkbox">
+         <input name="checkbox1" type="checkbox" value="First Choice"/>
+         First Choice
+        </label>
+       </div>
+       <div class="checkbox">
+        <label class="checkbox">
+         <input name="checkbox1" type="checkbox" value="Second Choice"/>
+         Second Choice
+        </label>
+       </div>
+       <div class="checkbox">
+        <label class="checkbox">
+         <input name="checkbox1" type="checkbox" value="Third Choice"/>
+         Third Choice
+        </label>
+       </div>
+      </div>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-primary " name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+© 2014-2017 Pareto Software, LLC   | Blog | Bootstrap Form Builder
+
